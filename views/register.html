@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <script src="/js/register.js" defer></script>
+    <script src="../js/icons.js" defer></script>
+    <title>Register</title>
+</head>
+<body>
+    <div class="container">
+        <section class="header__section">
+            <header>
+                <h1>ENL</h1>
+                <article class="header__nav">
+                    <nav>
+                        <a href="/views/index.html">Home</a>  
+                    </nav>
+                    <a class="a-icon" href="/views/login.html" title="login">
+                        <i class="user"></i>
+                    </a>
+                </article>
+            </header>
+        </section>
+        <main class="form">
+            <h2 class="title">Register Form</h2>
+            <form>
+                <section class="form__step active">
+                    <article class="form__input">
+                        <input type="text" name="firstname" title="firstname" placeholder=" " data-info="Must starts with a capital letter and must be at least two letters!" required pattern="[A-Z][a-zA-z- ]+">
+                        <label for="firstname" >First Name</label>
+                    </article>
+                    <article class="form__input">
+                        <input type="text" name="lastname" title="lastname" placeholder=" " data-info="Must starts with a capital letter and must be at lease two letters!" required pattern="[A-Z][a-zA-z- ]+">
+                        <label for="lastname">Last Name</label>
+                        
+                    </article>
+                    <div class="validation"></div>
+                    <div class="step__button">
+                        <div ></div>
+                        <button class="next" type="button">Next</button>
+                        <!-- <div class="next">Next</div> -->   
+                    </div>
+                    <p>
+                        Already registered? <a href="/views/login.html">Login</a> here
+                    </p>
+                </section>
+                <section class="form__step">
+                    <article class="form__input">
+                        <input type="tel" name="phone" title="phone" placeholder=" " data-info="Enter a valid phone No." required pattern="(?:\+)?\(?\d{1,3}\)?([ -.]?)((\d{3}\1\d{3}\1\d{4})|\d{5,10})">
+                        <label for="phone">Phone No</label>
+                    </article>
+                    <article class="form__input">
+                        <input type="date" name="dob" title="dob" required placeholder=" " pattern="\d{2}([-/ ])\d{2}\1\d{2,4}">
+                    </article>
+                    <div class="validation"></div>
+                    <div class="step__button">   
+                        <button class="prev" type="button">Prev</button>
+                        <button class="next" type="button">Next</button>
+                    </div>
+                </section>
+                <section class="form__step">
+                    <article class="form__input">
+                        <input type="text" name="strNo" title="strNo" placeholder=" " required data-info="Cannot enter more than 8 character" pattern="(\w{2,8} )?\d+">
+                        <label for="strNo">Street No</label>
+                    </article>
+                    <article class="form__input">
+                        <input type="text" name="street" title="street" data-info='Special characters not accepted' required placeholder=" " pattern="^[A-Za-z][a-zA-Z- ]{8,25}">
+                        <label for="street">Street Name</label>
+                    </article>
+                    <article class="form__input">
+                        <input type="text" name="city" title="city" required placeholder=" " pattern="[\w -]+"/>
+                        <label for="city">City</label>
+                    </article>
+                    <article class="form__input">
+                        <input type="text" name="state" title="state" required placeholder=" " pattern="[A-Za-z0-9]+"/>
+                        <label for="state">State</label>
+                    </article>
+                    <article class="form__input">
+                        <input type="text" name="postcode" title="postcode" placeholder=" "/>
+                        <label for="postcode">Postal Code</label>
+                    </article>
+                    <div class="validation"></div>
+                    <div class="step__button">
+                        <button class="prev" type="button">Prev</button>
+                        <button class="next" type="button">Next</button>
+                    </div>
+                </section>
+                <section class="form__step">
+                    <article class="form__input">
+                        <input type="email" name="email" title="email" placeholder=" " data-info="Enter a valid email" required pattern="(^([a-z]+(\.[a-z]+)?)@)([a-z]+\.[a-z]{3}|([a-z]+\.[a-z]{2}\.([a-z]{2,6})))"/>
+                        <label for="email">Email</label>
+                    </article>
+                    <article class="form__input">
+                        <input type="password" name="pwd" title="pwd" placeholder=" " data-info="Password must include at least one of (@#!-_&*), at least a capital letter, at least a number and must be at least 8 characters." required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@-_#!&*]).{8,}$"/>
+                        <label for="pwd">Password</label>
+                    </article>
+                    <article class="form__input">
+                        <input type="password" name="confirmPwd" title="confirmPwd" required placeholder=" ">
+                        <label for="confirmPwd">Confirm Password</label>
+                    </article>
+                    <div class="validation"></div>
+                    <div class="step__button">
+                        <button class="prev" type="button">Prev</button>
+                        <button class="next" type="submit">Submit</button>
+                    </div>
+                </section>
+                
+            </form>
+        </main>
+    </div>
+</body>
+</html>

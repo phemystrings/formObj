@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/style.css">
+    <script src="../js/login.js" defer></script>
+    <script src="../js/icons.js" defer></script>
+    <title>Login</title>
+</head>
+<body>
+    <div class="container">
+        <section class="header__section">
+            <header>
+                <h1>ENL</h1>
+                <article class="header__nav">
+                    <nav>
+                        <a href="/views/home.html">Home</a>
+                    </nav>
+                    <a class="a-icon" href="/views/register.html" title="register">
+                        <i class="register"></i>
+                    </a>
+                </article>
+            </header>
+        </section>
+        <main class="form">
+            <h2 class="title">Login </h2>
+            <form>
+                <section class="form__step active">
+                    <article class="form__input">
+                        <input type="email" name="email" title="email" required placeholder=" "/>
+                        <label for="email">Email</label>
+                    </article>
+                    <article class="form__input">
+                        <input type="password" name="pwd" required title="pwd" placeholder=" "/>
+                        <label for="pwd">Password</label>
+                    </article>
+                    <span></span>
+                    <div class="step__button">
+                        <div></div>
+                        <button type="submit">Login</button>
+                    </div>
+                </section>
+                <p>
+                No user account? <a href="./register.html">Sign-up</a> here.
+                </p>
+            </form>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,255 @@
+/* RESET */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* VARIABLES */
+:root {
+  --FORM-BG-COLOR: rgba(204, 230, 230, 0.664);
+  --BTN-COLOR: rgb(0, 78, 78);
+  --BTN-BG-COLOR: rgba(0, 128, 128, 0.486);
+  --SHADOW: 2px 2px 3px rgba(0, 128, 128, 0.486);
+  --NAV-COLOR: rgba(1, 51, 51, 0.849);
+}
+html {
+  font-family: "Lato", sans-serif;
+}
+body {
+  display: grid;
+  min-height: 100vh;
+  background-color: rgba(219, 231, 219, 0.24);
+}
+.container {
+  width: 100%;
+}
+.home {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.home h2,
+.home h3 {
+  text-align: center;
+}
+.home h2 {
+  padding: 0.5rem;
+}
+.home__content {
+  /* background-color: blue; */
+  padding: 1rem 1.5rem;
+  min-height: 80vh;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+}
+.home__content article {
+  /* background-color: yellow; */
+  padding: 0.5rem;
+  min-height: 150px;
+  font-size: 1.1rem;
+  border-radius: 0.5rem;
+  background-color: var(--FORM-BG-COLOR);
+  box-shadow: var(--SHADOW);
+}
+.home__content article p {
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  text-align: justify;
+}
+.title {
+  margin-bottom: 0.5rem;
+  text-shadow: var(--SHADOW);
+  font-size: 2rem;
+}
+
+a {
+  text-decoration: none;
+  background-color: transparent;
+  color: var(--BTN-COLOR);
+}
+.header__section {
+  width: 100%;
+  background-color: rgba(0, 128, 128, 0.692);
+  box-shadow: var(--SHADOW);
+}
+.header__nav,
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header {
+  padding: 1rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-size: 1.5rem;
+}
+
+header i,
+.a-icon {
+  width: 24px;
+  height: 24px;
+}
+header i {
+  fill: var(--BTN-COLOR);
+  cursor: pointer;
+}
+.a-icon {
+  background: transparent;
+  border: none;
+}
+nav a:not(:last-child) {
+  margin: 0.5rem;
+}
+nav a {
+  padding: 0.5rem;
+  color: var(--NAV-COLOR);
+  font-weight: 900;
+}
+.form,
+form {
+  display: grid;
+  place-items: center;
+}
+.form {
+  max-width: 314px;
+  padding: 2rem 0.5rem;
+  margin: auto;
+}
+form {
+  background-color: var(--FORM-BG-COLOR);
+  width: 100%;
+  padding: 1rem 0.5rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--SHADOW);
+}
+[data-toggle="active"] {
+  display: none;
+}
+.form__step {
+  display: none;
+  padding: 0.5rem;
+}
+.form__input {
+  position: relative;
+  width: 100%;
+  margin: 1rem auto;
+  box-shadow: var(--SHADOW);
+  border-radius: 0.5rem;
+  outline: 1px solid rgb(153, 224, 224);
+}
+.form__input input {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.5rem 0.5rem;
+  background-color: transparent;
+  width: 100%;
+  border: none;
+}
+.form__input input:focus {
+  outline: transparent;
+}
+.form__input label {
+  position: absolute;
+  inset: 0.5rem 0.5rem;
+  font-family: inherit;
+  color: rgba(0, 0, 0, 0.733);
+  width: max-content;
+  pointer-events: none;
+  transition: all ease-in 0.25s;
+  text-transform: capitalize;
+}
+
+input:focus-within ~ label,
+input:not(:placeholder-shown) ~ label {
+  transform: translate(-5%, -90%) scale(0.9);
+  background-color: rgba(175, 219, 219, 0.171);
+  border-radius: 0.5rem;
+  color: black;
+}
+.validation {
+  background: rgb(175, 223, 223);
+  text-align: justify;
+  padding: 0.5rem;
+  color: red;
+  border-radius: 0.5rem;
+  display: none;
+}
+.step__button {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.prev,
+.next,
+.step__button button {
+  background-color: var(--BTN-BG-COLOR);
+  margin: 0.5rem 0;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  border: none;
+}
+
+.prev:is(:hover, :focus),
+.next:is(:hover, :focus),
+.step__button button:is(:hover, :focus) {
+  background-color: aqua;
+}
+.users {
+  padding: 1rem 2rem;
+  display: grid;
+  place-items: center;
+}
+.userTable table {
+  border-collapse: collapse;
+  box-shadow: 10px 10px 10px rgba(0, 128, 128, 0.199);
+  text-align: left;
+}
+.userTable table th {
+  background-color: rgba(7, 78, 78, 0.637);
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 900;
+}
+.userTable table tbody td {
+  padding: 0.5rem 1rem;
+  font: 0.8rem;
+  background-color: rgba(212, 236, 236, 0.678);
+}
+.userTable table tbody tr:nth-child(even) {
+  background-color: rgba(0, 128, 128, 0.452);
+}
+.userTable table tbody button {
+  margin: 0 0.3rem;
+  border: 1px solid teal;
+  border-radius: 0.3rem;
+  padding: 0.2rem 0.3rem;
+  box-shadow: var(--SHADOW);
+  cursor: pointer;
+}
+.userTable table td button i {
+  width: 25px;
+  fill: teal;
+  margin: 0 0.2rem;
+  display: flex;
+}
+.active {
+  display: block;
+}
+
+.form__details {
+  display: grid;
+  max-width: 70%;
+  min-height: 80vh;
+  margin: auto;
+  text-align: center;
+}
+.details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+}
